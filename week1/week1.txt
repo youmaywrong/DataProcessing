@@ -1,0 +1,6 @@
+5. What is a so called “branch” in Git terms and why would you use it?
+
+A branch is an independant line of development. When you create a new branch, you can isolate your work from the other files (in the main branch). 
+When you mess something up in your own branch, it won't affect the files in the other branches. So it is especially useful to do debugging or to do some testing in it.
+
+
