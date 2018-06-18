@@ -22,7 +22,7 @@ def make_plot():
     current_state = state_select.value
     current_df = df[df['state'] == current_state]
 
-    years = ['2014', '2015', '2016', '2017', '2018']
+    years = ['2014', '2015', '2016', '2017']
 
     mass_shootings = current_df[current_df['incident_characteristics'].str.contains("mass shooting") == True]
     armed_robbery = current_df[current_df['incident_characteristics'].str.contains("robbery") == True]
@@ -36,8 +36,6 @@ def make_plot():
 
     for characteristic, name, color in zip(data, names, Spectral4):
         incidents = [x for x in characteristic.groupby('year').size()]
-        if not incidents:
-            incidents = 0
         plot.line(years, incidents, line_width=2, color=color, alpha=0.8, legend=name)
 
     plot.xaxis.axis_label = 'Year'
