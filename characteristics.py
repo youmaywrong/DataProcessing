@@ -2,12 +2,12 @@ from os.path import join, dirname
 import datetime
 import pandas as pd
 from bokeh.io import curdoc
-from bokeh.layouts import row, column, widgetbox
-from bokeh.models import Select
-from bokeh.palettes import Spectral4
+from bokeh.layouts import row, widgetbox
+from bokeh.models import Select, DatetimeTickFormatter
 from bokeh.plotting import figure
+import numpy as np
 
-# in de terminal: bokeh serve --show characteristic-incidents-per-state.py
+# in de terminal: bokeh serve --show characteristics.py
 
 df = pd.read_csv("stage3.csv")
 df = df.copy()
@@ -22,23 +22,27 @@ def make_plot():
     current_state = state_select.value
     current_df = df[df['state'] == current_state]
 
-    years = ['2014', '2015', '2016', '2017', '2018']
+    current_char = characteristic_select.value
+    relevant_incidents = current_df[current_df['incident_characteristics'].str.contains(characteristics[current_char]['keyword']) == True]
 
-    mass_shootings = current_df[current_df['incident_characteristics'].str.contains("mass shooting") == True]
-    armed_robbery = current_df[current_df['incident_characteristics'].str.contains("robbery") == True]
-    gang_involvement = current_df[current_df['incident_characteristics'].str.contains("gang") == True]
-    domestic_violence = current_df[current_df['incident_characteristics'].str.contains("domestic") == True]
+    years = [2014, 2015, 2016, 2017]
 
-    data = [mass_shootings, armed_robbery, gang_involvement, domestic_violence]
-    names = ["Mass Shootings", "Armed Robbery", "Gang Involvement", "Domestic Violence"]
+    n_incidents = []
+    for year in years:
+        if year in relevant_incidents['year'].unique():
+            n_incidents.append(relevant_incidents[relevant_incidents['year'] == year]['incident_id'].count())
+        else:
+            n_incidents.append(0)
 
-    plot = figure()
 
-    for characteristic, name, color in zip(data, names, Spectral4):
-        incidents = [x for x in characteristic.groupby('year').size()]
-        if not incidents:
-            incidents = 0
-        plot.line(years, incidents, line_width=2, color=color, alpha=0.8, legend=name)
+    plot = figure(plot_width=500, plot_height=500)
+
+    plot.line(['2014', '2015', '2016', '2017'], n_incidents, line_width=2, alpha=0.8, legend=current_state)
+
+    # style plot title
+    plot.title.text=current_char + " in " + current_state
+    plot.title.text_font_size='25px'
+    plot.title.align='center'
 
     plot.xaxis.axis_label = 'Year'
     plot.yaxis.axis_label = 'Incidents'
@@ -53,9 +57,29 @@ states = sorted(df['state'].unique())
 state_select = Select(value='Alabama', title='State', options=states)
 state_select.on_change('value', update)
 
-controls = widgetbox(state_select, width=200)
+characteristics = {
+    'Mass Shootings': {
+        'keyword': 'mass shooting',
+    },
+    'Armed Robbery': {
+        'keyword': 'robbery',
+    },
+    'Gang Involvement': {
+        'keyword': 'gang',
+    },
+    'Domestic Violence': {
+        'keyword': 'domestic',
+    }
+}
+
+characteristic_select = Select(value='Mass Shootings', title='Characteristic', options=sorted(characteristics.keys()))
+characteristic_select.on_change('value', update)
+
+
+controls = widgetbox([state_select, characteristic_select], width=200)
 layout = row(controls, make_plot())
 
 
 curdoc().add_root(layout)
 curdoc().title = "Incidents by State"
+
