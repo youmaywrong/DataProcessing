@@ -46,6 +46,9 @@ def make_plot():
 
     plot.xaxis.axis_label = 'Year'
     plot.yaxis.axis_label = 'Incidents'
+    plot.y_range.start = 0
+    plot.x_range.start = 2014
+    plot.x_range.end = 2017
 
     return plot
 
@@ -82,4 +85,3 @@ layout = row(controls, make_plot())
 
 curdoc().add_root(layout)
 curdoc().title = "Incidents by State"
-
