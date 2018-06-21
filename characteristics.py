@@ -3,7 +3,7 @@ import datetime
 import pandas as pd
 from bokeh.io import curdoc
 from bokeh.layouts import row, widgetbox
-from bokeh.models import Select, DatetimeTickFormatter, Panel, Tabs
+from bokeh.models import Select, DatetimeTickFormatter, Panel, Tabs, PreText
 from bokeh.plotting import figure
 import numpy as np
 
@@ -110,8 +110,10 @@ p2.title.text_font_size='25px'
 p2.title.align='center'
 layout2 = row(test_select, p2)
 tab2 = Panel(child=layout2, title="line")
+tab3_text = PreText(text="""Hello world""")
+tab3 = Panel(child=tab3_text, title="Hello")
 
-tabs = Tabs(tabs=[tab1, tab2])
+tabs = Tabs(tabs=[tab1, tab2, tab3])
 
 curdoc().add_root(tabs)
 curdoc().title = "Incidents by State"
