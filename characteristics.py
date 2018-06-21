@@ -3,7 +3,7 @@ import datetime
 import pandas as pd
 from bokeh.io import curdoc
 from bokeh.layouts import row, widgetbox
-from bokeh.models import Select, DatetimeTickFormatter
+from bokeh.models import Select, DatetimeTickFormatter, Panel, Tabs
 from bokeh.plotting import figure
 import numpy as np
 
@@ -96,6 +96,22 @@ characteristic_select.on_change('value', update)
 # add select menus and plot to current document
 controls = widgetbox([state_select, characteristic_select], width=200)
 layout = row(controls, make_plot())
+tab1 = Panel(child=layout, title="Incidents by State")
 
-curdoc().add_root(layout)
+########################################################################
+
+# test tabs
+test_select = Select(value='A', options=['A', 'B', 'C'])
+
+p2 = figure(plot_width=500, plot_height=500)
+p2.line([1, 2, 3, 4, 5], [6, 7, 2, 4, 5], line_width=3, color="navy", alpha=0.5)
+p2.title.text='Testing Tabs'
+p2.title.text_font_size='25px'
+p2.title.align='center'
+layout2 = row(test_select, p2)
+tab2 = Panel(child=layout2, title="line")
+
+tabs = Tabs(tabs=[tab1, tab2])
+
+curdoc().add_root(tabs)
 curdoc().title = "Incidents by State"
