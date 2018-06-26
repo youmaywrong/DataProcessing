@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gun Violence</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="shortcut icon" href="logo.ico" /> -->
+        <link
+            href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.13.min.css"
+            rel="stylesheet" type="text/css">
+        <link
+            href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.13.min.css"
+            rel="stylesheet" type="text/css">
+        <link
+            href="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.13.min.css"
+            rel="stylesheet" type="text/css">
+
+        <script src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.13.min.js"></script>
+        <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.13.min.js"></script>
+        <script src="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.13.min.js"></script>
+    </head>
+    <body>
+        <div class = "page_intro">
+            <div class = "intro">
+                <!-- photoshop titel op afbeelding -->
+                <h1></h1>
+            </div>
+        </div>
+
+        <div class = "page_container">
+            <div class = "dv1_1">
+                <h1>Verschillen tussen staten</h1>
+                <div class = "page_left">
+                    <script type="text/javascript">
+                      (function() {
+                        var fn = function() {
+                          Bokeh.safely(function() {
+                            (function(root) {
+                              function embed_document(root) {
+
+                              var docs_json = '{"6b202b19-3270-46a3-85b7-9a111fccfa59":{"roots":{"references":[{"attributes":{},"id":"54af9ce0-3a34-45a5-bb1c-5460f6f624d0","type":"BasicTickFormatter"},{"attributes":{"callback":null},"id":"ae44ec22-c640-459d-968d-b3c6ab33561a","type":"DataRange1d"},{"attributes":{"fill_color":{"value":"#1f77b4"},"line_color":{"value":"#1f77b4"},"x":{"field":"x"},"y":{"field":"y"}},"id":"b196d333-3e34-4319-8166-970ee5fa1353","type":"Circle"},{"attributes":{"plot":{"id":"2f071947-dd65-4442-b3f1-77a3e46d79e4","subtype":"Figure","type":"Plot"},"ticker":{"id":"d3dcd51a-b8c0-4b77-a3f7-644155bc45e1","type":"BasicTicker"}},"id":"febd082f-cb27-46c9-8271-ed85c6320d96","type":"Grid"},{"attributes":{"formatter":{"id":"527d4ee1-450e-4570-ac45-395af1b087b9","type":"BasicTickFormatter"},"plot":{"id":"2f071947-dd65-4442-b3f1-77a3e46d79e4","subtype":"Figure","type":"Plot"},"ticker":{"id":"97c1c0f4-77b1-4f56-acb8-dba38cd73e61","type":"BasicTicker"}},"id":"00b2fbbf-b018-4e31-a666-ce7415dc9894","type":"LinearAxis"},{"attributes":{},"id":"527d4ee1-450e-4570-ac45-395af1b087b9","type":"BasicTickFormatter"},{"attributes":{},"id":"d3dcd51a-b8c0-4b77-a3f7-644155bc45e1","type":"BasicTicker"},{"attributes":{},"id":"97c1c0f4-77b1-4f56-acb8-dba38cd73e61","type":"BasicTicker"},{"attributes":{"source":{"id":"722695d6-3d8e-494e-b376-364d39a2eb4f","type":"ColumnDataSource"}},"id":"fa46f5d7-099a-4ff7-b91b-40b05b3c0541","type":"CDSView"},{"attributes":{"dimension":1,"plot":{"id":"2f071947-dd65-4442-b3f1-77a3e46d79e4","subtype":"Figure","type":"Plot"},"ticker":{"id":"97c1c0f4-77b1-4f56-acb8-dba38cd73e61","type":"BasicTicker"}},"id":"0d01a2fa-b100-4d18-bad6-90e556e5f9ce","type":"Grid"},{"attributes":{"callback":null},"id":"72c517cf-a93a-4a17-aa08-4e78ccfdea04","type":"DataRange1d"},{"attributes":{},"id":"3ab9ca5d-f6e3-42c2-a85c-e74e9ea38a63","type":"LinearScale"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"plot":null,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"e84fc5bd-050f-462f-8782-2d2a8eb0d61f","type":"BoxAnnotation"},{"attributes":{"below":[{"id":"ea2316e0-2ab2-45fc-8605-5b08bfcaec2d","type":"LinearAxis"}],"left":[{"id":"00b2fbbf-b018-4e31-a666-ce7415dc9894","type":"LinearAxis"}],"renderers":[{"id":"ea2316e0-2ab2-45fc-8605-5b08bfcaec2d","type":"LinearAxis"},{"id":"febd082f-cb27-46c9-8271-ed85c6320d96","type":"Grid"},{"id":"00b2fbbf-b018-4e31-a666-ce7415dc9894","type":"LinearAxis"},{"id":"0d01a2fa-b100-4d18-bad6-90e556e5f9ce","type":"Grid"},{"id":"e84fc5bd-050f-462f-8782-2d2a8eb0d61f","type":"BoxAnnotation"},{"id":"2b5f4843-8039-4c53-b0ac-1e936e7feb76","type":"GlyphRenderer"}],"title":{"id":"080cec9d-457e-4b92-96a9-dc0979576e00","type":"Title"},"toolbar":{"id":"02509660-404d-487a-96da-37642ff95cd6","type":"Toolbar"},"x_range":{"id":"72c517cf-a93a-4a17-aa08-4e78ccfdea04","type":"DataRange1d"},"x_scale":{"id":"3ab9ca5d-f6e3-42c2-a85c-e74e9ea38a63","type":"LinearScale"},"y_range":{"id":"ae44ec22-c640-459d-968d-b3c6ab33561a","type":"DataRange1d"},"y_scale":{"id":"02935f06-9165-480e-aa37-69bc6f5a3f4a","type":"LinearScale"}},"id":"2f071947-dd65-4442-b3f1-77a3e46d79e4","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"02935f06-9165-480e-aa37-69bc6f5a3f4a","type":"LinearScale"},{"attributes":{"plot":null,"text":""},"id":"080cec9d-457e-4b92-96a9-dc0979576e00","type":"Title"},{"attributes":{"callback":null,"column_names":["x","y"],"data":{"x":[1,2],"y":[3,4]}},"id":"722695d6-3d8e-494e-b376-364d39a2eb4f","type":"ColumnDataSource"},{"attributes":{},"id":"f21bacc5-dc40-4fd9-83ad-1e73d42ee7c6","type":"PanTool"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"f21bacc5-dc40-4fd9-83ad-1e73d42ee7c6","type":"PanTool"},{"id":"6828be49-b58c-4d0e-a485-8082127cbcf4","type":"WheelZoomTool"},{"id":"dd96c5ba-e4ca-484b-a1b1-42c3ba2b8888","type":"BoxZoomTool"},{"id":"3fd8adb8-3913-4457-8adb-74f30d45c776","type":"SaveTool"},{"id":"4306bad1-d5d5-4c1a-90af-f02ce7c0f33a","type":"ResetTool"},{"id":"1dfc95f9-8d1a-4f3f-b5e7-c14af9113814","type":"HelpTool"}]},"id":"02509660-404d-487a-96da-37642ff95cd6","type":"Toolbar"},{"attributes":{},"id":"6828be49-b58c-4d0e-a485-8082127cbcf4","type":"WheelZoomTool"},{"attributes":{"overlay":{"id":"e84fc5bd-050f-462f-8782-2d2a8eb0d61f","type":"BoxAnnotation"}},"id":"dd96c5ba-e4ca-484b-a1b1-42c3ba2b8888","type":"BoxZoomTool"},{"attributes":{"data_source":{"id":"722695d6-3d8e-494e-b376-364d39a2eb4f","type":"ColumnDataSource"},"glyph":{"id":"b196d333-3e34-4319-8166-970ee5fa1353","type":"Circle"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"ede32cd6-68f6-4ef0-a2e0-fa4dd9df381b","type":"Circle"},"selection_glyph":null,"view":{"id":"fa46f5d7-099a-4ff7-b91b-40b05b3c0541","type":"CDSView"}},"id":"2b5f4843-8039-4c53-b0ac-1e936e7feb76","type":"GlyphRenderer"},{"attributes":{},"id":"3fd8adb8-3913-4457-8adb-74f30d45c776","type":"SaveTool"},{"attributes":{},"id":"4306bad1-d5d5-4c1a-90af-f02ce7c0f33a","type":"ResetTool"},{"attributes":{},"id":"1dfc95f9-8d1a-4f3f-b5e7-c14af9113814","type":"HelpTool"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"x":{"field":"x"},"y":{"field":"y"}},"id":"ede32cd6-68f6-4ef0-a2e0-fa4dd9df381b","type":"Circle"},{"attributes":{"formatter":{"id":"54af9ce0-3a34-45a5-bb1c-5460f6f624d0","type":"BasicTickFormatter"},"plot":{"id":"2f071947-dd65-4442-b3f1-77a3e46d79e4","subtype":"Figure","type":"Plot"},"ticker":{"id":"d3dcd51a-b8c0-4b77-a3f7-644155bc45e1","type":"BasicTicker"}},"id":"ea2316e0-2ab2-45fc-8605-5b08bfcaec2d","type":"LinearAxis"}],"root_ids":["2f071947-dd65-4442-b3f1-77a3e46d79e4"]},"title":"Bokeh Application","version":"0.12.13"}}';
+                              var render_items = [{"docid":"6b202b19-3270-46a3-85b7-9a111fccfa59","elementid":"81ba6057-ece9-42ab-bc6e-93e4fc4fb1ee","modelid":"2f071947-dd65-4442-b3f1-77a3e46d79e4"}];
+                              root.Bokeh.embed.embed_items(docs_json, render_items);
+
+                              }
+                              if (root.Bokeh !== undefined) {
+                                embed_document(root);
+                              } else {
+                                var attempts = 0;
+                                var timer = setInterval(function(root) {
+                                  if (root.Bokeh !== undefined) {
+                                    embed_document(root);
+                                    clearInterval(timer);
+                                  }
+                                  attempts++;
+                                  if (attempts > 100) {
+                                    console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing")
+                                    clearInterval(timer);
+                                  }
+                                }, 10, root)
+                              }
+                            })(window);
+                          });
+                        };
+                        if (document.readyState != "loading") fn();
+                        else document.addEventListener("DOMContentLoaded", fn);
+                      })();
+                    </script>
+                    <div class="bk-root">
+                        <div class="bk-plotdiv" id="282071d2-6ffc-4f46-b657-9e4584c736f1"></div>
+                    </div>
+                </div>
+                <div class = "page_right">
+                    <h3>Zijn er opzienbare verschillen tussen staten?</h3>
+                    <p>- fun fact</p>
+                    <p>- fun fact</p>
+                </div>
+            </div>
+        </div>
+
+        <div class = "page_container">
+            <div class = "dv1_2">
+                <h1>Verschillen tussen steden</h1>
+                <div class = "page_left">
+                    <h3>Zijn er opzienbare verschillen tussen steden?</h3>
+                    <p>- fun fact</p>
+                    <p>- fun fact</p>
+                </div>
+                <div class = "page_right">
+                    <img src = "img_test.png"></img>
+                </div>
+            </div>
+        </div>
+
+        <div class = "page_container">
+            <div class = "dv1_3">
+                <h1>Verschillen tussen jaren</h1>
+                <div class = "page_left">
+                    <img src = "img_test.png"></img>
+                </div>
+                <div class = "page_right">
+                    <h3>Zijn er opzienbare verschillen tussen jaren?</h3>
+                    <p>- fun fact</p>
+                    <p>- fun fact</p>
+                </div>
+            </div>
+        </div>
+
+        <div class = "page_container">
+            <div class = "dv2">
+                <h1>Incident karakteristieken</h1>
+                <div class = "page_left">
+                    <h3>Hoe ziet het patroon tussen slachtoffer en dader er uit in diverse incidenten?</h3>
+                    <p>- fun fact</p>
+                    <p>- fun fact</p>
+                </div>
+                <div class = "page_right">
+                    <img src = "img_test.png"></img>
+                </div>
+            </div>
+        </div>
+
+        <div class = "page_container">
+            <div class = "dv3">
+                <h1>Politieke voorkeur</h1>
+                <div class = "page_left">
+                    <img src = "img_test.png"></img>
+                </div>
+                <div class = "page_right">
+                    <h3>Is er een verband tussen politieke voorkeur van een staat en het aantal schietincidenten per inwoners?</h3>
+                    <p>- fun fact</p>
+                    <p>- fun fact</p>
+                </div>
+            </div>
+        </div>
+
+        <div class = "page_container">
+            <div class = "dv4">
+                <h1>Meeste incidenten & meeste doden</h1>
+                <div class = "page_left">
+                    <h3>Zijn de staten met veel schietincidenten ook de staten met de meeste doden per incident?</h3>
+                    <p>- fun fact</p>
+                    <p>- fun fact</p>
+                </div>
+                <div class = "page_right">
+                    <img src = "img_test.png"></img>
+                </div>
+            </div>
+        </div>
+
+        <div class = "page_container">
+            <div class = "dv5">
+                <h1>Wapenbezit en frequentie van incidenten</h1>
+                <div class = "page_left">
+                    <img src = "img_test.png"></img>
+                </div>
+                <div class = "page_right">
+                    <h3>Is er verband tussen de cijfers over wapenbezit en de frequentie van schietincidenten?</h3>
+                    <p>- fun fact</p>
+                    <p>- fun fact</p>
+                </div>
+            </div>
+        </div>
+
+        <div class = "page_end">
+            <div class = "end">
+                <h1>Ending</h1>
+            </div>
+        </div>
+    </body>
+</html>
