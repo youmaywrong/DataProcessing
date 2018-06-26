@@ -15,6 +15,7 @@ h3 {
     color: #F55F60;
 }
 
+
 .page_container {
     text-align: left;
     margin-top: -20px;
@@ -23,16 +24,12 @@ h3 {
     margin-right: 8%;
 }
 
-.page_intro {
+#page_intro {
     text-align: center;
     margin-top: -20px;
     min-height: 100%;
     background: url('bg.jpg');
     background-size: cover;
-}
-
-.intro h1 {
-    color: #fff;
 }
 
 .page_left {
@@ -52,15 +49,27 @@ h3 {
     height: 70%;
 }
 
-.page_end {
+#page_end {
     background-color: #F55F60;
     text-align: center;
     margin-top: -20px;
     min-height: 100%;
 }
 
-.page_end h1 {
+#page_end h1 {
     color: #fff;
+}
+
+.section {
+    text-align: left;
+    min-height: 100%;
+}
+
+#section0 {
+    text-align: center;
+    min-height: 100%;
+    background: url('bg.jpg');
+    background-size: cover;
 }
 
 /* deelvraag 1 */
