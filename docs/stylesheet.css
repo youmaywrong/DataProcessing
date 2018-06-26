@@ -1,0 +1,14 @@
+body {
+    background: url('bg.jpg');
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    font-size: 30px;
+}
