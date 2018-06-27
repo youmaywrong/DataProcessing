@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bokeh Plot</title>
+        
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.13.min.css" type="text/css" />
+        
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.13.min.js"></script>
+<script type="text/javascript">
+    Bokeh.set_log_level("info");
+</script>
+        <style>
+          html {
+            width: 100%;
+            height: 100%;
+          }
+          body {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+          }
+        </style>
+    </head>
+    <body>
+        
+        <div class="bk-root">
+            <div class="bk-plotdiv" id="54e40275-b05c-4360-8160-791318242310"></div>
+        </div>
+        
+        <script type="application/json" id="dd11c213-5113-437d-841e-dbe60724b6f5">
+          {"c2ea9b6a-7b02-4317-afab-923623b2d9c8":{"roots":{"references":[{"attributes":{},"id":"2f9f14ef-ad51-48d4-a38e-a52f571d8e17","type":"CategoricalTicker"},{"attributes":{"bottom":{"field":"bottom"},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"field":"deaths"},"width":{"value":0.5},"x":{"field":"states"}},"id":"ee0c538f-cedb-4f2e-a2d7-46fb58659d04","type":"VBar"},{"attributes":{"formatter":{"id":"fa69d836-17df-4e0e-83a4-4dc466267f5e","type":"CategoricalTickFormatter"},"major_label_orientation":0.7853981633974483,"major_label_text_font_size":{"value":"10px"},"plot":{"id":"91fca047-bd33-46ae-92a0-98ec172da173","subtype":"Figure","type":"Plot"},"ticker":{"id":"2f9f14ef-ad51-48d4-a38e-a52f571d8e17","type":"CategoricalTicker"}},"id":"365ced88-61ca-42d4-9fd9-47bfa33e6aa5","type":"CategoricalAxis"},{"attributes":{"source":{"id":"6f158a98-d50b-4a2e-b897-1d5ffa2b6ccd","type":"ColumnDataSource"}},"id":"fd093687-0056-4346-982f-c45d701f168b","type":"CDSView"},{"attributes":{"grid_line_color":{"value":null},"plot":{"id":"91fca047-bd33-46ae-92a0-98ec172da173","subtype":"Figure","type":"Plot"},"ticker":{"id":"2f9f14ef-ad51-48d4-a38e-a52f571d8e17","type":"CategoricalTicker"}},"id":"ab00527e-8ff5-4c73-9f8c-4a904cfa02cd","type":"Grid"},{"attributes":{"callback":null,"start":0},"id":"9337c681-21d2-4ca6-ae94-3dceac6c28ec","type":"DataRange1d"},{"attributes":{},"id":"e0e827db-75ef-41a0-99e7-3970e9ad5bf8","type":"LinearScale"},{"attributes":{},"id":"52dbcaa1-46de-40f5-92e7-89fa701ae320","type":"CategoricalScale"},{"attributes":{"bottom":{"field":"bottom"},"fill_color":{"value":"#F55F60"},"line_color":{"value":"#F55F60"},"top":{"field":"deaths"},"width":{"value":0.5},"x":{"field":"states"}},"id":"3363c054-e562-4c5b-ba6f-bb17cb9b5f35","type":"VBar"},{"attributes":{"formatter":{"id":"6f0bf6b8-fa68-44bb-a1e3-b6c1342335ff","type":"BasicTickFormatter"},"plot":{"id":"91fca047-bd33-46ae-92a0-98ec172da173","subtype":"Figure","type":"Plot"},"ticker":{"id":"5d03310c-1e03-4325-889b-e95827fb61fb","type":"BasicTicker"}},"id":"c120a0bc-89b1-4b11-8817-95e47b0dbdac","type":"LinearAxis"},{"attributes":{"source":{"id":"6f158a98-d50b-4a2e-b897-1d5ffa2b6ccd","type":"ColumnDataSource"}},"id":"298da0c4-b675-4102-b828-b8be059bac75","type":"CDSView"},{"attributes":{"align":"center","plot":null,"text":"Deaths vs incidents","text_font_size":{"value":"16px"}},"id":"826f1a90-e540-42a9-bd55-948e0457fa88","type":"Title"},{"attributes":{"data_source":{"id":"6f158a98-d50b-4a2e-b897-1d5ffa2b6ccd","type":"ColumnDataSource"},"glyph":{"id":"c86a886b-a792-40fd-8a7e-aa04cd4964f7","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"19522254-fa62-4c2b-bba3-98c77df753ba","type":"VBar"},"selection_glyph":null,"view":{"id":"298da0c4-b675-4102-b828-b8be059bac75","type":"CDSView"}},"id":"ccfd73ba-b529-4684-a2d4-c0fb89180545","type":"GlyphRenderer"},{"attributes":{"below":[{"id":"365ced88-61ca-42d4-9fd9-47bfa33e6aa5","type":"CategoricalAxis"}],"left":[{"id":"c120a0bc-89b1-4b11-8817-95e47b0dbdac","type":"LinearAxis"}],"outline_line_color":{"value":null},"plot_height":500,"renderers":[{"id":"365ced88-61ca-42d4-9fd9-47bfa33e6aa5","type":"CategoricalAxis"},{"id":"ab00527e-8ff5-4c73-9f8c-4a904cfa02cd","type":"Grid"},{"id":"c120a0bc-89b1-4b11-8817-95e47b0dbdac","type":"LinearAxis"},{"id":"62eabe83-58ac-40c8-b5e6-1eea2b2d945f","type":"Grid"},{"id":"8587ff62-a0e3-4ed2-8617-1902c6c92a87","type":"BoxAnnotation"},{"id":"ccfd73ba-b529-4684-a2d4-c0fb89180545","type":"GlyphRenderer"},{"id":"f90275cc-1da4-461a-9db1-97e64a6761bc","type":"GlyphRenderer"}],"title":{"id":"826f1a90-e540-42a9-bd55-948e0457fa88","type":"Title"},"toolbar":{"id":"0f455df3-09c7-4833-aba8-078c1626919c","type":"Toolbar"},"toolbar_location":null,"x_range":{"id":"f2b7e9bc-414c-4d7a-9e38-9c94c9f1281e","type":"FactorRange"},"x_scale":{"id":"52dbcaa1-46de-40f5-92e7-89fa701ae320","type":"CategoricalScale"},"y_range":{"id":"9337c681-21d2-4ca6-ae94-3dceac6c28ec","type":"DataRange1d"},"y_scale":{"id":"e0e827db-75ef-41a0-99e7-3970e9ad5bf8","type":"LinearScale"}},"id":"91fca047-bd33-46ae-92a0-98ec172da173","subtype":"Figure","type":"Plot"},{"attributes":{"bottom":{"field":"deaths"},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"field":"incidents"},"width":{"value":0.5},"x":{"field":"states"}},"id":"19522254-fa62-4c2b-bba3-98c77df753ba","type":"VBar"},{"attributes":{"callback":null,"column_names":["states","incidents","deaths","bottom"],"data":{"bottom":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"deaths":[3395,5516,3887,5022,2498,1690,2451,2382,2220,2171,1810,1599,2127,1579,472,1456,1599,1686,1877,1156,862,1062,1174,927,845,792,447,339,773,273,458,1086,446,536,799,214,225,490,331,267,278,88,112,62,166,154,69,90,73,57,63],"incidents":[17538,16267,15016,13566,10234,9696,8919,8909,8727,8094,7616,6934,6621,6121,5981,5943,5845,5793,5469,5373,4786,4154,3597,3449,3430,3198,3189,3064,2842,2517,2406,2323,2286,2141,1951,1682,1650,1643,1573,1349,1071,964,907,893,661,638,573,544,494,472,289],"states":["Illinois","California","Florida","Texas","Ohio","New York","Georgia","Pennsylvania","North Carolina","Louisiana","Tennessee","South Carolina","Missouri","Michigan","Massachusetts","Virginia","Indiana","Maryland","Alabama","New Jersey","Wisconsin","Kentucky","Mississippi","Oklahoma","Washington","Colorado","District of Columbia","Connecticut","Arkansas","Iowa","Minnesota","Arizona","Oregon","Kansas","Nevada","Delaware","Nebraska","New Mexico","West Virginia","Alaska","Utah","New Hampshire","Maine","Rhode Island","Idaho","Montana","North Dakota","South Dakota","Wyoming","Vermont","Hawaii"]}},"id":"6f158a98-d50b-4a2e-b897-1d5ffa2b6ccd","type":"ColumnDataSource"},{"attributes":{"bottom":{"field":"deaths"},"fill_color":{"value":"#1f77b4"},"line_color":{"value":"#1f77b4"},"top":{"field":"incidents"},"width":{"value":0.5},"x":{"field":"states"}},"id":"c86a886b-a792-40fd-8a7e-aa04cd4964f7","type":"VBar"},{"attributes":{},"id":"fa69d836-17df-4e0e-83a4-4dc466267f5e","type":"CategoricalTickFormatter"},{"attributes":{"data_source":{"id":"6f158a98-d50b-4a2e-b897-1d5ffa2b6ccd","type":"ColumnDataSource"},"glyph":{"id":"3363c054-e562-4c5b-ba6f-bb17cb9b5f35","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"ee0c538f-cedb-4f2e-a2d7-46fb58659d04","type":"VBar"},"selection_glyph":null,"view":{"id":"fd093687-0056-4346-982f-c45d701f168b","type":"CDSView"}},"id":"f90275cc-1da4-461a-9db1-97e64a6761bc","type":"GlyphRenderer"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_scroll":"auto","active_tap":"auto","logo":null,"tools":[{"id":"34993224-5110-4eaf-86b1-83e20b26825b","type":"HoverTool"}]},"id":"0f455df3-09c7-4833-aba8-078c1626919c","type":"Toolbar"},{"attributes":{},"id":"6f0bf6b8-fa68-44bb-a1e3-b6c1342335ff","type":"BasicTickFormatter"},{"attributes":{"callback":null,"factors":["Illinois","California","Florida","Texas","Ohio","New York","Georgia","Pennsylvania","North Carolina","Louisiana","Tennessee","South Carolina","Missouri","Michigan","Massachusetts","Virginia","Indiana","Maryland","Alabama","New Jersey","Wisconsin","Kentucky","Mississippi","Oklahoma","Washington","Colorado","District of Columbia","Connecticut","Arkansas","Iowa","Minnesota","Arizona","Oregon","Kansas","Nevada","Delaware","Nebraska","New Mexico","West Virginia","Alaska","Utah","New Hampshire","Maine","Rhode Island","Idaho","Montana","North Dakota","South Dakota","Wyoming","Vermont","Hawaii"]},"id":"f2b7e9bc-414c-4d7a-9e38-9c94c9f1281e","type":"FactorRange"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"plot":null,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"8587ff62-a0e3-4ed2-8617-1902c6c92a87","type":"BoxAnnotation"},{"attributes":{"callback":null,"tooltips":[["State","@states"],["Incidents","@incidents"],["Deaths","@deaths"]]},"id":"34993224-5110-4eaf-86b1-83e20b26825b","type":"HoverTool"},{"attributes":{"dimension":1,"plot":{"id":"91fca047-bd33-46ae-92a0-98ec172da173","subtype":"Figure","type":"Plot"},"ticker":{"id":"5d03310c-1e03-4325-889b-e95827fb61fb","type":"BasicTicker"}},"id":"62eabe83-58ac-40c8-b5e6-1eea2b2d945f","type":"Grid"},{"attributes":{},"id":"5d03310c-1e03-4325-889b-e95827fb61fb","type":"BasicTicker"}],"root_ids":["91fca047-bd33-46ae-92a0-98ec172da173"]},"title":"Bokeh Application","version":"0.12.13"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('dd11c213-5113-437d-841e-dbe60724b6f5').textContent;
+                  var render_items = [{"docid":"c2ea9b6a-7b02-4317-afab-923623b2d9c8","elementid":"54e40275-b05c-4360-8160-791318242310","modelid":"91fca047-bd33-46ae-92a0-98ec172da173"}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        embed_document(root);
+                        clearInterval(timer);
+                      }
+                      attempts++;
+                      if (attempts > 100) {
+                        console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing")
+                        clearInterval(timer);
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    </body>
+</html>
