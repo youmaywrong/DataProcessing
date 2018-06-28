@@ -1,4 +1,9 @@
-code/.ipynb_checkpoints/*
+code/.ipynb_checkpoints/*.ipynb
 code/.~lock.gun_ownership.csv#
 code/.~lock.gunownership.csv#
 code/.~lock.stage3.csv#
+
+.ipynb_checkpoints
+.~lock.stage3.csv#
+.~lock.gunownership.csv#
+.~lock.gun_ownership.csv#
